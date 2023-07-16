@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: radial-gradient(circle, blue, cyan, orangered, blue )
+}
+.wrapper{
+    display: flex;
+}
+.wrapper .txt{
+    color: blue;
+    height: 100px;
+    text-shadow: 2px 2px 4px #000000;
+    padding: 15px;
+    background-color: cyan;
+    box-shadow: 10px 10px;
+    font-size: 60px;
+    font-weight: 400;
+}
+.wrapper .run-text{
+    margin-left: 15px;
+    color: cyan;
+    text-shadow: 2px 2px 4px #000000;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+.run-text li{
+    list-style: none;
+    color: black;
+    font-size: 60px;
+    font-family: 400;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+.run-text li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+}
+.run-text li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    border-left: 3px solid cyan;
+    animation: typing 3s steps(12) infinite;
+}
+@keyframes typing{
+    40%, 60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }
+}
